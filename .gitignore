@@ -24,3 +24,4 @@ dist/
 build/
 .cache/
 coverage/
+storage/

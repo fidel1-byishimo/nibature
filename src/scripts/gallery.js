@@ -8,14 +8,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     gallery.replaceChildren(...items.map((item) => {
       const card = document.createElement('article');
       const image = document.createElement('img');
-      const caption = document.createElement('div');
       card.className = 'gallery-item';
       image.src = item.src;
       image.alt = item.alt;
       image.loading = 'lazy';
-      caption.className = 'gallery-caption';
-      caption.textContent = item.caption;
-      card.append(image, caption);
+      card.append(image);
       return card;
     }));
   } catch { /* Keep the built-in gallery available when the server is offline. */ }
