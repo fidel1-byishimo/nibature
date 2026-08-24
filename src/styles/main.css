@@ -80,4 +80,37 @@ textarea { min-height:150px; resize:vertical; }
 .gallery-item img { width:100%; height:240px; object-fit:cover; display:block; transition:transform 0.3s ease; }
 .gallery-item:hover img { transform:scale(1.05); }
 .gallery-caption { padding:14px 16px; font-size:.9rem; color:var(--muted); font-weight:600; border-top:1px solid var(--line); }
+.admin-body { background:#eef4ef; }
+.admin-shell { min-height:100vh; display:grid; grid-template-columns:280px minmax(0,1fr); }
+.admin-sidebar { background:#163d34; color:#e8f1eb; padding:38px 28px; display:flex; flex-direction:column; }
+.admin-brand { color:#fff; text-decoration:none; font:700 2rem Georgia,serif; letter-spacing:.04em; }
+.admin-brand span { color:#f2ca8e; }
+.admin-subtitle { color:#bcd1c4; margin:12px 0 48px; font-size:.88rem; line-height:1.5; }
+.admin-nav { display:grid; gap:8px; }
+.admin-nav a { color:#dbe9e0; text-decoration:none; padding:11px 13px; border-radius:4px; font-weight:700; }
+.admin-nav a:hover,.admin-nav a[aria-current="page"] { background:#285d4f; color:#fff; }
+.admin-security-note { margin-top:auto; padding-top:32px; color:#bcd1c4; font-size:.8rem; line-height:1.5; }
+.admin-content { max-width:1200px; width:100%; margin:0 auto; padding:54px; }
+.admin-header { display:flex; justify-content:space-between; gap:24px; align-items:flex-start; margin-bottom:38px; }
+.admin-header h1 { font-size:clamp(2.3rem,5vw,4rem); margin-bottom:8px; }
+.admin-header p { margin:0; color:var(--muted); }
+.admin-kicker { margin:0 0 8px; color:var(--gold); font-size:.75rem; font-weight:700; letter-spacing:.14em; }
+.admin-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:30px; }
+.admin-stat,.admin-panel { background:#fff; border:1px solid var(--line); border-radius:6px; box-shadow:0 8px 24px rgba(20,56,45,.05); }
+.admin-stat { padding:23px; display:grid; gap:6px; }
+.admin-stat span,.admin-stat small { color:var(--muted); }
+.admin-stat strong { color:var(--forest); font:700 1.3rem Georgia,serif; }
+.admin-panel { padding:30px; margin-top:24px; }
+.admin-panel-heading { display:flex; justify-content:space-between; gap:20px; align-items:center; margin-bottom:22px; }
+.admin-panel-heading h2 { font-size:1.7rem; margin:0; }
+.admin-actions { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.admin-action { min-height:126px; padding:20px; border:1px solid var(--line); border-radius:4px; text-decoration:none; display:grid; align-content:center; gap:7px; background:#fbfdfb; }
+.admin-action:hover { border-color:var(--forest); background:var(--sage); }
+.admin-action strong { color:var(--forest); font:700 1.15rem Georgia,serif; }
+.admin-action span { color:var(--muted); font-size:.92rem; }
+.admin-checklist-panel { max-width:700px; }
+.admin-check { display:flex; gap:12px; align-items:center; padding:14px 0; border-top:1px solid var(--line); color:#355247; cursor:pointer; }
+.admin-check input { width:18px; height:18px; accent-color:var(--forest); }
+.admin-clear { border:0; background:transparent; color:var(--forest); font:700 .9rem Arial,sans-serif; cursor:pointer; text-decoration:underline; }
+@media(max-width:760px) { .admin-shell{grid-template-columns:1fr}.admin-sidebar{padding:25px}.admin-subtitle{margin:8px 0 22px}.admin-security-note{margin-top:24px;padding-top:0}.admin-content{padding:32px 20px}.admin-header{display:grid}.admin-stats,.admin-actions{grid-template-columns:1fr}.admin-panel{padding:22px}.admin-panel-heading{align-items:flex-start}.admin-header .button{justify-self:start} }
 @media(max-width:760px) { .menu-button{display:block}.nav{min-height:68px}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 20px;background:#fffdf9;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:14px}.nav-links.open{display:flex}.hero{min-height:560px}.section{padding:60px 0}.split,.footer-grid{grid-template-columns:1fr;gap:34px}.cards,.cards.four{grid-template-columns:1fr}.impact-grid{grid-template-columns:1fr;gap:20px}.form-grid{grid-template-columns:1fr}.form-group.full{grid-column:auto}.image-panel{min-height:270px}.gallery-grid{grid-template-columns:1fr} }
