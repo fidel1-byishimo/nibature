@@ -82,7 +82,7 @@ function saveGalleryUpload(dataUrl, caption) {
   const filename = `${Date.now()}-${crypto.randomBytes(8).toString('hex')}.${extension}`;
   fs.mkdirSync(UPLOAD_DIR, { recursive: true });
   fs.writeFileSync(path.join(UPLOAD_DIR, filename), image);
-  const item = { id: crypto.randomUUID(), src: `uploads/${filename}`, alt: cleanText(caption, 160) || 'Nibature Ministries activity', caption: cleanText(caption, 160) || 'Ministry activity' };
+  const item = { id: crypto.randomUUID(), src: `uploads/${filename}`, alt: cleanText(caption, 160) || 'Nibature International Ministry activity', caption: cleanText(caption, 160) || 'Ministry activity' };
   const gallery = readGallery();
   gallery.unshift(item);
   writeGallery(gallery);
@@ -147,4 +147,4 @@ const server = http.createServer(async (req, res) => {
   send(res, 405, { message: 'Method not allowed.' });
 });
 
-server.listen(PORT, () => console.log(`Nibature Ministries is running at http://localhost:${PORT}`));
+server.listen(PORT, () => console.log(`Nibature International Ministry is running at http://localhost:${PORT}`));
