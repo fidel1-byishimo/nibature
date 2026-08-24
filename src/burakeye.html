@@ -49,6 +49,29 @@
           </article>
         </section>
 
+        <section class="admin-panel" data-gallery-admin>
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-kicker">GALLERY MANAGER</p>
+              <h2>Add or remove gallery photos</h2>
+            </div>
+          </div>
+          <form class="admin-login" data-admin-login>
+            <div class="form-group"><label for="admin-username">Administrator name</label><input id="admin-username" name="username" autocomplete="username" required></div>
+            <div class="form-group"><label for="admin-password">Password</label><input id="admin-password" name="password" type="password" autocomplete="current-password" required></div>
+            <button class="button" type="submit">Unlock gallery manager</button>
+          </form>
+          <div hidden data-gallery-tools>
+            <form class="admin-upload" data-gallery-upload>
+              <div class="form-group"><label for="gallery-image">Photo (JPG, PNG, or WebP; maximum 5 MB)</label><input id="gallery-image" name="image" type="file" accept="image/jpeg,image/png,image/webp" required></div>
+              <div class="form-group"><label for="gallery-caption">Caption</label><input id="gallery-caption" name="caption" maxlength="160" placeholder="Describe this photo" required></div>
+              <button class="button" type="submit">Upload photo</button>
+            </form>
+            <p class="form-message" data-gallery-message aria-live="polite"></p>
+            <div class="admin-gallery-list" data-admin-gallery-list></div>
+          </div>
+        </section>
+
         <section class="admin-panel">
           <div class="admin-panel-heading">
             <div>
