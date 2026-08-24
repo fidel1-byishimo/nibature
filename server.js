@@ -61,14 +61,6 @@ const server = http.createServer(async (req, res) => {
       return send(res, 201, { message: 'Thank you — your message has been received.' });
     } catch (error) { return send(res, 400, { message: error.message || 'Unable to process this request.' }); }
   }
-  if (req.method === 'POST' && url.pathname === '/api/donation-intentions') {
-    try {
-      const body = await readJson(req), amount = cleanText(body.amount, 40);
-      if (!amount) return send(res, 400, { message: 'Please choose a donation amount.' });
-      saveRecord('donation-intentions.json', { amount, receivedAt: new Date().toISOString() });
-      return send(res, 201, { message: 'Thank you for your intention to give. Please contact us for secure payment details.' });
-    } catch (error) { return send(res, 400, { message: error.message || 'Unable to process this request.' }); }
-  }
   if (req.method === 'GET' || req.method === 'HEAD') return serveStatic(res, url.pathname);
   send(res, 405, { message: 'Method not allowed.' });
 });
