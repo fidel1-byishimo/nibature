@@ -1,0 +1,25 @@
+{
+  "name": "organization-website",
+  "version": "1.0.0",
+  "description": "A website for an organization showcasing its services and information.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node --check server.js",
+    "check": "node --check server.js"
+  },
+  "keywords": [
+    "organization",
+    "website",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {}
+}

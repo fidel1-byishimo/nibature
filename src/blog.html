@@ -1,0 +1,107 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Stories of impact and transformation from Nibature Ministries.">
+    <title>Stories | Nibature Ministries</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          Nibature Ministries
+          <span>INTERNATIONAL</span>
+        </a>
+        <button class="menu-button" data-menu-button aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links" data-menu>
+          <li>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+          </li>
+          <li>
+            <a href="about.html" data-i18n="nav.about">About</a>
+          </li>
+          <li>
+            <a href="services.html" data-i18n="nav.services">Our work</a>
+          </li>
+          <li>
+            <a aria-current="page" href="blog.html" data-i18n="nav.blog">Stories</a>
+          </li>
+          <li>
+            <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+          </li>
+          <li>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+          </li>
+          <li>
+            <a href="payment.html" data-i18n="nav.give">Give</a>
+          </li>
+          <li>
+            <select class="lang-switcher" data-lang-switcher aria-label="Language switcher">
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+              <option value="sv">Svenska</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow" data-i18n="blog.eyebrow">Stories of impact</p>
+          <h1 data-i18n="blog.title">Hope has a story.</h1>
+          <p data-i18n="blog.description">Read about the people, moments and acts of service that shape our ministry.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div style="margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--line)">
+            <input type="search" id="blogSearch" data-i18n-placeholder="blog.search_placeholder" placeholder="Find a story" style="width:100%;max-width:400px;padding:10px;border:1px solid var(--line);border-radius:3px;font-size:1rem">
+          </div>
+          <div id="blogPosts" class="cards">
+            <article class="card post">
+              <div class="card-icon" data-i18n="blog.post_1_category">Community outreach</div>
+              <h3 data-i18n="blog.post_1_title">How we spread hope</h3>
+              <p data-i18n="blog.post_1_desc">Discover how simple acts of service are creating moments of encouragement and connection in our community.</p>
+              <a href="#" class="button" data-i18n="blog.read_more">Impact story</a>
+            </article>
+            <article class="card post">
+              <div class="card-icon" data-i18n="blog.post_2_category">Faith & counselling</div>
+              <h3 data-i18n="blog.post_2_title">Growing stronger together</h3>
+              <p data-i18n="blog.post_2_desc">When people share their gifts and show up for one another, meaningful change becomes possible.</p>
+              <a href="#" class="button" data-i18n="blog.read_more">Impact story</a>
+            </article>
+            <article class="card post">
+              <div class="card-icon" data-i18n="blog.post_3_category">Youth empowerment</div>
+              <h3 data-i18n="blog.post_3_title">Making room for new leaders</h3>
+              <p data-i18n="blog.post_3_desc">Our youth programmes help young people find confidence, build skills and lead with purpose.</p>
+              <a href="#" class="button" data-i18n="blog.read_more">Impact story</a>
+            </article>
+          </div>
+          <p id="noResults" hidden style="text-align:center;color:var(--muted);margin-top:32px" data-i18n="blog.no_results">No stories match that search.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p class="copyright" data-i18n="footer.copyright">© 2026 Nibature International Ministries. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="scripts/main.js">
+    </script>
+    <script>
+      const search = document.getElementById('blogSearch'), posts = [...document.querySelectorAll('#blogPosts .post')], empty = document.getElementById('noResults');
+      search.addEventListener('input', () => {
+      let visible = 0, q = search.value.toLowerCase().trim();
+      posts.forEach(p => {
+      const show = p.textContent.toLowerCase().includes(q);
+      p.hidden = !show;
+      if (show) visible++;
+      });
+      empty.hidden = visible !== 0;
+      });
+    </script>
+  </body>
+</html>

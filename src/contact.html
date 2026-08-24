@@ -1,0 +1,103 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Contact Nibature Ministries. Ask a question or learn about getting involved.">
+    <title>Contact | Nibature Ministries</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          Nibature Ministries
+          <span>INTERNATIONAL</span>
+        </a>
+        <button class="menu-button" data-menu-button aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links" data-menu>
+          <li>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+          </li>
+          <li>
+            <a href="about.html" data-i18n="nav.about">About</a>
+          </li>
+          <li>
+            <a href="services.html" data-i18n="nav.services">Our work</a>
+          </li>
+          <li>
+            <a href="blog.html" data-i18n="nav.blog">Stories</a>
+          </li>
+          <li>
+            <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+          </li>
+          <li>
+            <a aria-current="page" href="contact.html" data-i18n="nav.contact">Contact</a>
+          </li>
+          <li>
+            <a href="payment.html" data-i18n="nav.give">Give</a>
+          </li>
+          <li>
+            <select class="lang-switcher" data-lang-switcher aria-label="Language switcher">
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+              <option value="sv">Svenska</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Connect with us</p>
+          <h1 data-i18n="contact.title">We would love to hear from you.</h1>
+          <p data-i18n="contact.description">Ask a question, share a prayer request or find out how you can get involved.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="split">
+            <div>
+              <h2 data-i18n="contact.send_message">Send a message</h2>
+              <form data-contact-form>
+                <div style="margin-bottom:20px">
+                  <label for="name" style="display:block;margin-bottom:8px;font-weight:700" data-i18n="contact.name_label">Name</label>
+                  <input type="text" id="name" required style="width:100%;padding:10px;border:1px solid var(--line);border-radius:3px;font-size:1rem">
+                </div>
+                <div style="margin-bottom:20px">
+                  <label for="email" style="display:block;margin-bottom:8px;font-weight:700" data-i18n="contact.email_label">Email</label>
+                  <input type="email" id="email" required style="width:100%;padding:10px;border:1px solid var(--line);border-radius:3px;font-size:1rem">
+                </div>
+                <div style="margin-bottom:20px">
+                  <label for="message" style="display:block;margin-bottom:8px;font-weight:700" data-i18n="contact.message_label">Message</label>
+                  <textarea id="message" required rows="5" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:3px;font-size:1rem;font-family:inherit">
+                  </textarea>
+                </div>
+                <button type="submit" class="button" data-i18n="contact.send_button">Send message</button>
+                <p class="form-message" style="margin-top:12px;color:var(--forest);display:none">
+                </p>
+              </form>
+            </div>
+            <div>
+              <h2 data-i18n="contact.other_ways">Other ways to reach us</h2>
+              <h3 data-i18n="contact.email_title">Email</h3>
+              <p>
+                <a href="mailto:info@nibatureministries.org" style="color:var(--forest);text-decoration:underline">info@nibatureministries.org</a>
+              </p>
+              <h3 data-i18n="contact.get_involved_title">Get involved</h3>
+              <p data-i18n="contact.get_involved_desc">Write to us to learn about volunteering, partnership and ministry events.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p class="copyright" data-i18n="footer.copyright">© 2026 Nibature International Ministries. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="scripts/main.js">
+    </script>
+  </body>
+</html>

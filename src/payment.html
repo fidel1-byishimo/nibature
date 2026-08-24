@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Support Nibature Ministries with your generous gift.">
+    <title>Give | Nibature Ministries</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          Nibature Ministries
+          <span>INTERNATIONAL</span>
+        </a>
+        <button class="menu-button" data-menu-button aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links" data-menu>
+          <li>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+          </li>
+          <li>
+            <a href="about.html" data-i18n="nav.about">About</a>
+          </li>
+          <li>
+            <a href="services.html" data-i18n="nav.services">Our work</a>
+          </li>
+          <li>
+            <a href="blog.html" data-i18n="nav.blog">Stories</a>
+          </li>
+          <li>
+            <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+          </li>
+          <li>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+          </li>
+          <li>
+            <a aria-current="page" href="payment.html" data-i18n="nav.give">Give</a>
+          </li>
+          <li>
+            <select class="lang-switcher" data-lang-switcher aria-label="Language switcher">
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+              <option value="sv">Svenska</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow" data-i18n="payment.eyebrow">Support the mission</p>
+          <h1 data-i18n="payment.title">Your generosity makes a difference.</h1>
+          <p data-i18n="payment.description">Every gift helps us serve with care, equip young people and strengthen communities.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="split">
+            <div>
+              <h2 data-i18n="payment.choose_amount">Choose a gift amount</h2>
+              <p style="color:var(--muted)" data-i18n="payment.select_amount">Select an amount that feels right for you.</p>
+              <div style="margin-bottom:16px">
+                <label style="font-weight:700;margin-right:12px" data-i18n="payment.currency">Currency:</label>
+                <select id="currency-selector" style="padding:8px;border:1px solid var(--line);border-radius:3px;font-size:1rem">
+                  <option value="USD">USD ($)</option>
+                  <option value="EUR">EUR (€)</option>
+                </select>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;gap:12px;margin:24px 0">
+                <button data-donation="10" class="donation-btn button" style="flex:1;min-width:120px">$10</button>
+                <button data-donation="25" class="donation-btn button" style="flex:1;min-width:120px">$25</button>
+                <button data-donation="50" class="donation-btn button" style="flex:1;min-width:120px">$50</button>
+                <button data-donation="100" class="donation-btn button" style="flex:1;min-width:120px">$100</button>
+              </div>
+              <p style="margin:20px 0">
+                <strong data-i18n="payment.selected_amount">Selected amount:</strong>
+                <span data-donation-amount style="color:var(--forest);font-weight:700" data-i18n="payment.choose_amount_placeholder">Choose an amount</span>
+              </p>
+            </div>
+            <div id="payment-methods" style="display:none">
+              <h2 data-i18n="payment.choose_payment">Choose payment method</h2>
+              <p style="color:var(--muted)" data-i18n="payment.select_payment">Select your preferred payment method:</p>
+              <div style="display:flex;flex-direction:column;gap:12px;margin-top:20px">
+                <button class="payment-btn button" data-method="paypal" style="width:100%;text-align:left;padding:16px">
+                  <span style="font-size:1.1rem">💳 <span data-i18n="payment.paypal">PayPal</span></span>
+                  <span style="display:block;font-size:0.85rem;color:var(--muted);margin-top:4px" data-i18n="payment.paypal_desc">Pay with PayPal account</span>
+                </button>
+                <button class="payment-btn button" data-method="card" style="width:100%;text-align:left;padding:16px">
+                  <span style="font-size:1.1rem">💳 <span data-i18n="payment.card">Credit/Debit Card</span></span>
+                  <span style="display:block;font-size:0.85rem;color:var(--muted);margin-top:4px" data-i18n="payment.card_desc">Visa, Mastercard, etc.</span>
+                </button>
+              </div>
+            </div>
+            <div id="payment-info">
+              <h2 data-i18n="payment.arrange_gift">Arrange your gift</h2>
+              <p data-i18n="payment.select_amount_instruction">Select an amount above to choose your payment method.</p>
+              <p style="margin-top:24px;color:var(--muted)" data-i18n="payment.thank_you">Thank you for partnering with us.</p>
+              <p style="color:var(--muted)" data-i18n="payment.giving_enables">Your giving enables practical care and faith-filled encouragement where it is needed most.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p class="copyright" data-i18n="footer.copyright">© 2026 Nibature International Ministries. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="scripts/main.js">
+    </script>
+  </body>
+</html>

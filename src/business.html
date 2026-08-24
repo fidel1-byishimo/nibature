@@ -1,0 +1,211 @@
+﻿Global Traders - Men's Clothing
+body { font-family: 'Inter', Arial, sans-serif; }
+Global Traders
+Home
+About
+Collections
+Contact
+&#9776;
+ðŸ›’
+0
+Home
+About
+Collections
+Contact
+document.getElementById('mobile-menu-btn').onclick = function() {
+document.getElementById('mobile-menu').classList.toggle('hidden');
+};
+Elevate Your Style
+Premium men's clothing for every occasion. Discover the latest trends and timeless classics at Global Traders.
+Shop Collections
+About Us
+Global Traders is dedicated to providing high-quality, stylish, and comfortable men's clothing. From business attire to casual wear, our collections are designed for the modern man who values both fashion and function.
+Our Collections
+ðŸ•´ï¸
+Formal Wear
+Suits, shirts, and trousers for the boardroom and special occasions.
+ðŸ‘•
+Casual Collection
+T-shirts, polos, and jeans for everyday comfort and style.
+ðŸ§¥
+Outerwear
+Jackets, coats, and blazers to complete your look in any season.
+Shop Men's Collection
+Classic White Shirt
+Premium cotton, slim fit
+$35.00
+Add to Cart
+Blue Denim Shirt
+Casual, all-season wear
+$40.00
+Add to Cart
+Slim Fit Trousers
+Stretch fabric, navy blue
+$45.00
+Add to Cart
+Chino Trousers
+Classic fit, khaki
+$38.00
+Add to Cart
+Checked Casual Shirt
+Red/black, soft flannel
+$32.00
+Add to Cart
+Formal Black Trousers
+Classic, wrinkle-free
+$50.00
+Add to Cart
+&times;
+Your Cart
+Total: $
+0.00
+Place Order
+Checkout
+const products = [
+{ name: "Classic White Shirt", price: 35, img: "assets/shirt1.jpg" },
+{ name: "Blue Denim Shirt", price: 40, img: "assets/shirt2.jpg" },
+{ name: "Slim Fit Trousers", price: 45, img: "assets/trouser1.jpg" },
+{ name: "Chino Trousers", price: 38, img: "assets/trouser2.jpg" },
+{ name: "Checked Casual Shirt", price: 32, img: "assets/shirt3.jpg" },
+{ name: "Formal Black Trousers", price: 50, img: "assets/trouser3.jpg" }
+];
+// --- Load cart from localStorage or start empty ---
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+function saveCart() {
+localStorage.setItem('cart', JSON.stringify(cart));
+}
+function addToCart(idx) {
+const found = cart.find(item => item.idx === idx);
+if (found) {
+found.qty += 1;
+} else {
+cart.push({ idx, qty: 1 });
+}
+saveCart();
+updateCartCount();
+showCart();
+}
+function showCart() {
+document.getElementById('cartModal').classList.remove('hidden');
+renderCart();
+// Reset checkout form and button
+document.getElementById('checkoutForm').classList.add('hidden');
+document.getElementById('checkoutBtn').classList.remove('hidden');
+}
+function closeCart() {
+document.getElementById('cartModal').classList.add('hidden');
+}
+function renderCart() {
+const cartItems = document.getElementById('cartItems');
+if (cart.length === 0) {
+cartItems.innerHTML = "
+Your cart is empty.
+";
+document.getElementById('cartTotal').textContent = "0.00";
+updateCartCount();
+saveCart();
+// Hide checkout form and show checkout button
+document.getElementById('checkoutForm').classList.add('hidden');
+document.getElementById('checkoutBtn').classList.remove('hidden');
+return;
+}
+let html = "";
+let total = 0;
+cart.forEach((item, i) => {
+const prod = products[item.idx];
+total += prod.price * item.qty;
+html += `
+${prod.name}
+$${prod.price.toFixed(2)} x ${item.qty}
+-
+${item.qty}
++
+Remove
+`;
+});
+cartItems.innerHTML = html;
+document.getElementById('cartTotal').textContent = total.toFixed(2);
+updateCartCount();
+saveCart();
+}
+function changeQty(i, delta) {
+cart[i].qty += delta;
+if (cart[i].qty
+sum + item.qty, 0);
+document.getElementById('cartCount').textContent = count;
+saveCart();
+}
+function showCheckoutForm() {
+document.getElementById('checkoutBtn').classList.add('hidden');
+document.getElementById('checkoutForm').classList.remove('hidden');
+}
+// Handle checkout form submission
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.getElementById('checkoutForm');
+if (form) {
+form.onsubmit = function(e) {
+e.preventDefault();
+const name = document.getElementById('clientName').value.trim();
+const email = document.getElementById('clientEmail').value.trim();
+if (!name || !email) return;
+alert(`Thank you, ${name}! Your order has been received. (Demo only)`);
+cart = [];
+renderCart();
+saveCart();
+closeCart();
+// Reset form and button for next time
+form.reset();
+form.classList.add('hidden');
+document.getElementById('checkoutBtn').classList.remove('hidden');
+};
+}
+});
+// --- On page load, render cart count from localStorage ---
+updateCartCount();
+Contact Us
+Send Message
+Email: info@globaltraders.com
+Phone: +256 764 280242
+Contact: info@globaltraders.com
+FB
+TW
+IG
+&copy; 2025 Global Traders. All rights reserved.
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Global Traders - Men's Clothing</title>
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header style="background:#333; color:#fff; padding:15px 20px; display:flex; justify-content:space-between; align-items:center;">
+      <div style="font-size:24px; font-weight:bold;">Global Traders</div>
+      <nav style="display:flex; gap:20px;">
+        <a href="#" style="color:#fff;">Home</a>
+        <a href="#" style="color:#fff;">About</a>
+        <a href="#" style="color:#fff;">Collections</a>
+        <a href="#" style="color:#fff;">Contact</a>
+      </nav>
+      <div style="font-size:24px; cursor:pointer;">🛒</div>
+    </header>
+    <!-- Hero Section -->
+    <section style="background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:#fff; padding:60px 20px; text-align:center;">
+      <h1>Elevate Your Style</h1>
+      <p>Premium men's clothing for every occasion.</p>
+      <button style="background:#fff; color:#667eea; padding:12px 30px; border:none; border-radius:5px;">Shop Collections</button>
+    </section>
+    <!-- About Section -->
+    <section style="padding:40px 20px; background:#f5f5f5; text-align:center;">
+      <h2>About Us</h2>
+      <p>Global Traders is dedicated to providing high-quality men's clothing.</p>
+    </section>
+    <!-- Products Grid -->
+    <section style="padding:40px 20px;">
+      <h2 style="text-align:center;">Featured Products</h2>
+      <div id="productsGrid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px; max-width:1200px; margin:auto;">
+        <!-- Products will be generated by JavaScript -->
+      </div>
+    </section>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

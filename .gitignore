@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Environment files (keep the example template)
+.env
+.env.*
+!.env.example
+
+# Logs and runtime files
+*.log
+logs/
+pids/
+*.pid
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.agents/
+
+# Build output and caches
+dist/
+build/
+.cache/
+coverage/
