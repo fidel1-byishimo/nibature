@@ -6,9 +6,9 @@ const crypto = require('crypto');
 
 const PORT = process.env.PORT || 4000;
 const PUBLIC_DIR = path.join(__dirname, 'src');
-const DATA_DIR = path.join(__dirname, 'data');
+const DATA_DIR = process.env.STORAGE_DIR || path.join(__dirname, 'storage');
 const MAX_BODY_SIZE = 7 * 1024 * 1024;
-const UPLOAD_DIR = path.join(PUBLIC_DIR, 'assets', 'uploads');
+const UPLOAD_DIR = path.join(DATA_DIR, 'uploads');
 const GALLERY_FILE = path.join(DATA_DIR, 'gallery.json');
 const MIME_TYPES = { '.css': 'text/css', '.html': 'text/html', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.js': 'application/javascript', '.json': 'application/json', '.png': 'image/png', '.svg': 'image/svg+xml', '.webp': 'image/webp' };
 
@@ -82,7 +82,7 @@ function saveGalleryUpload(dataUrl, caption) {
   const filename = `${Date.now()}-${crypto.randomBytes(8).toString('hex')}.${extension}`;
   fs.mkdirSync(UPLOAD_DIR, { recursive: true });
   fs.writeFileSync(path.join(UPLOAD_DIR, filename), image);
-  const item = { id: crypto.randomUUID(), src: `assets/uploads/${filename}`, alt: cleanText(caption, 160) || 'Nibature Ministries activity', caption: cleanText(caption, 160) || 'Ministry activity' };
+  const item = { id: crypto.randomUUID(), src: `uploads/${filename}`, alt: cleanText(caption, 160) || 'Nibature Ministries activity', caption: cleanText(caption, 160) || 'Ministry activity' };
   const gallery = readGallery();
   gallery.unshift(item);
   writeGallery(gallery);
@@ -90,6 +90,14 @@ function saveGalleryUpload(dataUrl, caption) {
 }
 
 function serveStatic(res, pathname) {
+  if (pathname.startsWith('/uploads/')) {
+    const uploadPath = path.resolve(UPLOAD_DIR, decodeURIComponent(pathname.slice('/uploads/'.length)));
+    if (!uploadPath.startsWith(UPLOAD_DIR)) return send(res, 403, { message: 'Forbidden.' });
+    return fs.readFile(uploadPath, (error, content) => {
+      if (error) return send(res, 404, { message: 'Image not found.' });
+      send(res, 200, content, MIME_TYPES[path.extname(uploadPath).toLowerCase()] || 'application/octet-stream');
+    });
+  }
   const relativePath = pathname === '/' ? 'index.html' : decodeURIComponent(pathname).replace(/^[/\\]+/, '');
   const filePath = path.resolve(PUBLIC_DIR, relativePath);
   if (!filePath.startsWith(PUBLIC_DIR)) return send(res, 403, { message: 'Forbidden.' });
@@ -131,7 +139,7 @@ const server = http.createServer(async (req, res) => {
     if (!item) return send(res, 404, { message: 'Gallery image not found.' });
     const remaining = gallery.filter((entry) => entry.id !== id);
     writeGallery(remaining);
-    const uploadPath = path.resolve(PUBLIC_DIR, item.src);
+    const uploadPath = path.resolve(UPLOAD_DIR, path.basename(item.src));
     if (uploadPath.startsWith(UPLOAD_DIR) && fs.existsSync(uploadPath)) fs.unlinkSync(uploadPath);
     return send(res, 200, { message: 'Gallery image deleted.' });
   }
