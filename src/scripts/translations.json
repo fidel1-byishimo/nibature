@@ -6,15 +6,13 @@
       "services": "Our work",
       "blog": "Stories",
       "gallery": "Gallery",
-      "contact": "Contact",
-      "give": "Give"
+      "contact": "Contact"
     },
     "home": {
       "eyebrow": "Faith in action",
       "hero_title": "Hope that reaches beyond Sunday.",
       "hero_description": "Nibature International Ministries walks alongside people and communities through faith, care, learning and practical support.",
       "discover_work": "Discover our work",
-      "support_mission": "Support the mission",
       "mission_title": "Our mission",
       "mission_subtitle": "Growing faith. Restoring dignity. Strengthening communities.",
       "mission_description": "We believe lasting transformation begins with people being seen, heard and equipped. Our ministry creates space for spiritual growth and practical opportunity.",
@@ -64,8 +62,7 @@
       "service_4_desc": "Useful skills, shared knowledge and spaces for lasting growth.",
       "get_involved_title": "Be part of the work",
       "get_involved_desc": "Your time, prayer and generosity make this ministry possible.",
-      "get_involved_btn": "Get involved",
-      "give_btn": "Give today"
+      "get_involved_btn": "Get involved"
     },
     "blog": {
       "eyebrow": "Stories of impact",
@@ -98,26 +95,6 @@
       "get_involved_title": "Get involved",
       "get_involved_desc": "Write to us to learn about volunteering, partnership and ministry events."
     },
-    "payment": {
-      "eyebrow": "Support the mission",
-      "title": "Your generosity makes a difference.",
-      "description": "Every gift helps us serve with care, equip young people and strengthen communities.",
-      "choose_amount": "Choose a gift amount",
-      "select_amount": "Select an amount that feels right for you.",
-      "currency": "Currency:",
-      "selected_amount": "Selected amount:",
-      "choose_amount_placeholder": "Choose an amount",
-      "choose_payment": "Choose payment method",
-      "select_payment": "Select your preferred payment method:",
-      "paypal": "PayPal",
-      "paypal_desc": "Pay with PayPal account",
-      "card": "Credit/Debit Card",
-      "card_desc": "Visa, Mastercard, etc.",
-      "arrange_gift": "Arrange your gift",
-      "select_amount_instruction": "Select an amount above to choose your payment method.",
-      "thank_you": "Thank you for partnering with us.",
-      "giving_enables": "Your giving enables practical care and faith-filled encouragement where it is needed most."
-    },
     "footer": {
       "copyright": "© 2026 Nibature International Ministries. All rights reserved."
     }
@@ -129,15 +106,13 @@
       "services": "Notre travail",
       "blog": "Histoires",
       "gallery": "Galerie",
-      "contact": "Contact",
-      "give": "Donner"
+      "contact": "Contact"
     },
     "home": {
       "eyebrow": "La foi en action",
       "hero_title": "L'espoir qui va au-delà du dimanche.",
       "hero_description": "Nibature International Ministries accompagne les personnes et les communautés à travers la foi, le soin, l'apprentissage et le soutien pratique.",
       "discover_work": "Découvrir notre travail",
-      "support_mission": "Soutenir la mission",
       "mission_title": "Notre mission",
       "mission_subtitle": "Croître dans la foi. Restaurer la dignité. Renforcer les communautés.",
       "mission_description": "Nous croyons qu'une transformation durable commence lorsque les gens sont vus, entendus et équipés. Notre ministère crée un espace pour la croissance spirituelle et les opportunités pratiques.",
@@ -187,8 +162,7 @@
       "service_4_desc": "Compétences utiles, connaissances partagées et espaces pour une croissance durable.",
       "get_involved_title": "Faites partie du travail",
       "get_involved_desc": "Votre temps, vos prières et votre générosité rendent ce ministère possible.",
-      "get_involved_btn": "S'impliquer",
-      "give_btn": "Donner aujourd'hui"
+      "get_involved_btn": "S'impliquer"
     },
     "blog": {
       "eyebrow": "Histoires d'impact",
@@ -221,26 +195,6 @@
       "get_involved_title": "S'impliquer",
       "get_involved_desc": "Écrivez-nous pour en savoir sur le bénévolat, le partenariat et les événements du ministère."
     },
-    "payment": {
-      "eyebrow": "Soutenir la mission",
-      "title": "Votre générosité fait la différence.",
-      "description": "Chaque don nous aide à servir avec soin, à équiper les jeunes et à renforcer les communautés.",
-      "choose_amount": "Choisir un montant",
-      "select_amount": "Sélectionnez un montant qui vous convient.",
-      "currency": "Devise:",
-      "selected_amount": "Montant sélectionné:",
-      "choose_amount_placeholder": "Choisir un montant",
-      "choose_payment": "Choisir le mode de paiement",
-      "select_payment": "Sélectionnez votre mode de paiement préféré:",
-      "paypal": "PayPal",
-      "paypal_desc": "Payer avec un compte PayPal",
-      "card": "Carte de crédit/débit",
-      "card_desc": "Visa, Mastercard, etc.",
-      "arrange_gift": "Organiser votre don",
-      "select_amount_instruction": "Sélectionnez un montant ci-dessus pour choisir votre mode de paiement.",
-      "thank_you": "Merci de vous associer à nous.",
-      "giving_enables": "Votre don permet des soins pratiques et un encouragement rempli de foi là où c'est le plus nécessaire."
-    },
     "footer": {
       "copyright": "© 2026 Nibature International Ministries. Tous droits réservés."
     }
@@ -252,15 +206,13 @@
       "services": "Vårt arbete",
       "blog": "Berättelser",
       "gallery": "Galleri",
-      "contact": "Kontakt",
-      "give": "Ge"
+      "contact": "Kontakt"
     },
     "home": {
       "eyebrow": "Tro i handling",
       "hero_title": "Hopp som sträcker sig bortom söndagen.",
       "hero_description": "Nibature International Ministries går bredvid människor och samhällen genom tro, omsorg, lärande och praktiskt stöd.",
       "discover_work": "Upptäck vårt arbete",
-      "support_mission": "Stöd uppdraget",
       "mission_title": "Vårt uppdrag",
       "mission_subtitle": "Växande tro. Återställande av värdighet. Förstärkning av samhällen.",
       "mission_description": "Vi tror att varaktig förändring börjar när människor ses, hörs och utrustas. Vårt tjänst skapar utrymme för andlig tillväxt och praktiska möjligheter.",
@@ -310,8 +262,7 @@
       "service_4_desc": "Användbara färdigheter, delad kunskap och utrymmen för varaktig tillväxt.",
       "get_involved_title": "Var en del av arbetet",
       "get_involved_desc": "Din tid, bön och generositet gör detta tjänst möjligt.",
-      "get_involved_btn": "Engagera dig",
-      "give_btn": "Ge idag"
+      "get_involved_btn": "Engagera dig"
     },
     "blog": {
       "eyebrow": "Berättelser om påverkan",
@@ -343,26 +294,6 @@
       "email_title": "E-post",
       "get_involved_title": "Engagera dig",
       "get_involved_desc": "Skriv till oss för att lära dig om volontärarbete, partnerskap och tjänstevenemang."
-    },
-    "payment": {
-      "eyebrow": "Stöd uppdraget",
-      "title": "Din generositet gör skillnad.",
-      "description": "Varje gåva hjälper oss att tjäna med omsorg, utrusta unga människor och stärka samhällen.",
-      "choose_amount": "Välj ett gåvobelopp",
-      "select_amount": "Välj ett belopp som känns rätt för dig.",
-      "currency": "Valuta:",
-      "selected_amount": "Valt belopp:",
-      "choose_amount_placeholder": "Välj ett belopp",
-      "choose_payment": "Välj betalningsmetod",
-      "select_payment": "Välj din föredragna betalningsmetod:",
-      "paypal": "PayPal",
-      "paypal_desc": "Betala med PayPal-konto",
-      "card": "Kredit-/betalkort",
-      "card_desc": "Visa, Mastercard, etc.",
-      "arrange_gift": "Organisera din gåva",
-      "select_amount_instruction": "Välj ett belopp ovan för att välja din betalningsmetod.",
-      "thank_you": "Tack för att du samarbetar med oss.",
-      "giving_enables": "Ditt givande möjliggör praktisk vård och trofylld uppmuntran där det behövs mest."
     },
     "footer": {
       "copyright": "© 2026 Nibature International Ministries. Alla rättigheter förbehållna."
